@@ -19,4 +19,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "appsyk-astro-deno-deploy"
-          entrypoint: "./main.ts" # TODO: update entrypoint
+          entrypoint: "./dist/server/entry.mjs" # TODO: update entrypoint
