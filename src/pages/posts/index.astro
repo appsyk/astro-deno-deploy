@@ -1,0 +1,32 @@
+---
+import PostCard from "../../components/PostCard.astro";
+import { Base_URL } from "../../config/common-constant";
+
+const data = await fetch(`${Base_URL}/api/blogs?populate=*`);
+const postData = await data.json();
+console.log(2323, JSON.stringify(postData));
+---
+
+<div>
+    This is post page
+
+    <div class="post-container">
+        {
+            postData &&
+                postData.data &&
+                postData?.data?.length > 0 &&
+                postData?.data?.map((post) => {
+                    console.log(3243, post);
+                    return (
+                        <>
+                            <PostCard key={post.attributes.id} post={post} />
+                        </>
+                    );
+                })
+        }
+    </div>
+</div>
+
+<style>
+    @import "post-css.css";
+</style>

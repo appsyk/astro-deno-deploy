@@ -1,0 +1,25 @@
+---
+import { Base_URL } from "../config/common-constant";
+import BlogHtml from "./BlogHtml.astro";
+
+const { post } = await Astro.props;
+console.log(3212, post.attributes);
+// console.log('process.env.BACKEND_BASE_URL', process.env.BACKEND_BASE_URL)
+---
+
+{
+    post?.attributes && (
+        <div class="card">
+            <h3>{post.attributes.title}--</h3>
+            <BlogHtml post={post} />
+            <a href="/posts/self-sovereign-identity-how-w3-c-verifiable-credentials-vc-work-what-goes-on-the-ledger">View</a>
+        </div>
+    )
+}
+
+<style>
+    @import "../pages/posts/post-css.css";
+    .view-btn {
+        float: right;
+    }
+</style>

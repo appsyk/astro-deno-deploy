@@ -1,0 +1,21 @@
+{
+	"name": "starry-satellite",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@types/marked": "^4.0.8",
+		"astro": "^2.0.15",
+		"marked": "^4.2.12",
+		"particles.js": "^2.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.14.2"
+	}
+}

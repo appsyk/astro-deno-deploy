@@ -1,0 +1,9 @@
+---
+import { Base_URL } from "../config/common-constant";
+const { post } = Astro.props;
+const html = post.attributes.desc
+  ?.split("/uploads")
+  .join(`${Base_URL}/uploads`);
+---
+
+{html && <div set:html={html} />}

@@ -1,0 +1,58 @@
+---
+import Card from "../Card.astro";
+
+const data = [
+    {
+        title: "Password-less Authentication - A world beyond passwords",
+        body: "Blockster Lab’s CREDEBL Platform, showcasing Password-less authentication use case. This feature opens-up possibilitie",
+        href: "#",
+        img: "assets/website-images/testimonials-img.png"
+    },
+    {
+        title: "Authentication - A world beyond passwords",
+        body: "her hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail.",
+        href: "#",
+        img: "assets/website-images/mission-new.png"
+    },
+    {
+        title: "Password-less beyond passwords",
+        body: "Blockster Labs leverages a unique combination of deep domain experience, rich technical expertise and lean methodology to develop innovative products and solutions. We are also active contributors and participants in several industry forums to continuously uplift our offerings and create differentiating propositions for our clients.",
+        href: "#",
+        img: "assets/website-images/about-img2.jpg"
+    },
+    {
+        title: "A world beyond passwords",
+        body: "Blockster Lab’s CREDEBL Platform, showcasing Password-less authentication use case. This feature opens-up possibilitie",
+        href: "#",
+        img: "assets/website-images/vision-new.png"
+    }
+]
+---
+
+<div>
+    <h1>Resources</h1>
+    <p>Check out our knowledge store to further enhance your grasp on the subject</p>
+    <div class="slider">
+        {
+            data.map((item) => {
+                const {title, body, href, img} = item
+                return(
+                    <Card title={title} body={body} href={href} img={img} />
+                )
+            })
+        }
+    </div>
+</div>
+
+<style>
+    .slider {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    h1, p {
+        text-align: center;
+    }
+    p {
+        margin-bottom: 2rem;
+    }
+</style>

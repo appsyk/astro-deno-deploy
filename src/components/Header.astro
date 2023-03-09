@@ -1,0 +1,81 @@
+---
+const menus = [
+    {
+        page: "About us",
+        path: "/about-us",
+    },
+    {
+        page: "Products",
+        path: "/products",
+    },
+    {
+        page: "Resources",
+        path: "/about-us",
+        options: [
+            {
+                page: "1Dsdsad",
+                path: "/asdasda",
+            },
+            {
+                page: "2Hfgfg",
+                path: "/sdd",
+            },
+        ],
+    },
+    {
+        page: "Careers",
+        path: "/careers",
+    },
+    {
+        page: "Contact us",
+        path: "/contact-us",
+    },
+];
+---
+
+<div class="nav-list">
+    <div>
+        <a href="/">
+            <img
+            src="assets/website-images/Blockster_Lab_Logo_on-servey-page.png"
+            height="70px"
+        />
+    </a>
+    </div>
+    <div>
+        {
+            menus &&
+                menus.map((menu) => (
+                    <div>
+                        <a href={menu.path}>{menu.page}</a>
+                    </div>
+                ))
+        }
+    </div>
+</div>
+
+<style>
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0px;
+        box-shadow: 2px 0px 10px 1px grey;
+        background-color: white;
+        z-index: 999;
+        font-size: 16px;
+    }
+    .nav-list div {
+        padding: 0.25rem 1rem;
+    }
+    .nav-list div,
+    .nav-list div div {
+        display: flex;
+        align-items: center;
+    }
+    .nav-list div div a{
+        text-decoration: none;
+        color: rgb(35, 35, 35);
+        font-weight: 600;
+    }
+</style>

@@ -1,0 +1,18 @@
+---
+import { marked } from "marked";
+import { Base_URL } from "../config/common-constant";
+
+const blogdata = await fetch(`${Base_URL}/api/blogs-mds?populate=*`);
+const data = await blogdata.json();
+const items = await fetch(`${Base_URL}${data.data[0].attributes.markdown.data.attributes.url}`);
+const markdown = await items.text();
+console.log('markdown', markdown)
+const content = marked.parse(markdown);
+console.log(9898, content)
+---
+
+<html lang="en">
+    <body>
+        <article set:html={content} />
+    </body>
+</html>

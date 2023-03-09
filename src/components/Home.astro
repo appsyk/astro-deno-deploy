@@ -1,0 +1,42 @@
+---
+import Resource from "./home-page/Resource.astro";
+import WhyUs from "./home-page/WhyUs.astro";
+import TwoColLayout from "./TwoColLayout.astro";
+import Particle from "./ui-components/Particle.astro";
+
+---
+
+<div>
+    <div class="section1">
+        <Particle />
+        <TwoColLayout />
+    </div>
+    <div class="section2">
+        <Resource />
+    </div>
+    <div class="section3">
+        <WhyUs />
+    </div>
+</div>
+
+<style>
+    .section1 {
+        background: url("assets/website-images/header-bg.png");
+        background-repeat: no-repeat;
+        height: 600px;
+        color: white;
+    }
+    .section2 {
+        color: black;
+        margin-top: 2rem;
+        padding: 5rem;
+    }
+    .section3 {
+        background: url("assets/website-images/bg4.jpg");
+        background-repeat: no-repeat;
+        height: 600px;
+        color: black;
+        margin-top: 2rem;
+        padding: 5rem;
+    }
+</style>

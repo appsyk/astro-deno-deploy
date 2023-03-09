@@ -1,0 +1,38 @@
+---
+import OfficeLocation from "../../components/contact-us-page/OfficeLocation.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+
+<Layout title="Welcome to Astro.">
+	<Header />
+    <div class="section1">
+        <h1>
+            Contact Us
+        </h1>
+    </div>
+    <div class="section2">
+        <OfficeLocation />
+    </div>
+	<Footer />
+</Layout>
+
+
+<style>
+    h1 {
+        margin: 0;
+        padding: auto;
+    }
+    .section1 {
+        background: url("assets/website-images/header-bg.png");
+        background-repeat: no-repeat;
+        height: 600px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10rem;
+    }
+</style>

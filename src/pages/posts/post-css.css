@@ -1,0 +1,14 @@
+.post-container{
+    display: flex;
+}
+.card {
+    box-shadow: 0 0 8px 0px black;
+    padding: 1rem;
+    overflow: hidden;
+    margin: 1rem;
+    width: min-content;
+}
+
+.img{
+    width: 300px;
+}

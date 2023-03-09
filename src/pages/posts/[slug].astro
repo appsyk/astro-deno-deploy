@@ -1,0 +1,34 @@
+---
+import BlogHtml from "../../components/BlogHtml.astro";
+import PostCard from "../../components/PostCard.astro";
+import { Base_URL } from "../../config/common-constant";
+
+export async function getStaticPaths() {
+    const postData = await fetch(`${Base_URL}/api/blogs?populate=*`);
+    const { data } = await postData.json();
+    console.log(4357, data);
+
+    return data.map((post) => {
+        console.log(4358, post);
+        return {
+            params: { slug: post.attributes.slug },
+            props: { post },
+        };
+    });
+}
+
+const { post } = Astro.props;
+console.log(4356, post);
+---
+<!-- {post && <PostCard post={post} />} -->
+<div>
+    <button onclick="window.location.href(`/posts`, '')">Back</button>
+</div>
+{
+    post?.attributes && (
+        <div class="card-container">
+            <h2> By ID</h2>
+            <h3>{post.attributes.title}</h3>
+        </div>
+    )
+}
