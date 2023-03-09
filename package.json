@@ -10,8 +10,9 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/deno": "^4.1.0",
 		"@types/marked": "^4.0.8",
-		"astro": "^2.0.15",
+		"astro": "^2.1.2",
 		"marked": "^4.2.12",
 		"particles.js": "^2.0.0"
 	},
